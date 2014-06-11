@@ -16,7 +16,7 @@
 		<!-- LAUNCH UNIT only has ON and OFF switch. Frequency of 1 means show ad and 0 means no ad. -->	
 		
 		<!-- HARD LAUNCH AD UNIT WHEN APP IS FRESHLY LAUNCHED -->		
-		<ad type="launchInterstitial" tag="launchHard" targetParams=""  frequency="0" sizes="(320,360),(300,250),(320,480)"/>
+		<ad type="launchInterstitial" tag="launchHard" targetParams=""  frequency="1" sizes="(320,360),(300,250),(320,480)"/>
 		
 		<!-- SOFT LAUNCH AD UNIT WHEN APP IS LAUNCHED FROM BACKGROUND. AVAILABLE ON ALL APP SECTIONS EXCEPT WHEN VIDEOS ARE PLAYING -->	
 		<ad type="launchInterstitial" tag="launchSoft" targetParams=""  frequency="0" sizes="(320,360),(300,250),(320,480)"/>
