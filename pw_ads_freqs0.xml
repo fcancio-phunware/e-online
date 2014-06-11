@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<ads>	
+	<!-- frequency :: (1)LAUNCH UNIT only has ON and OFF switch. Frequency of 1 means show ad and 0 means no ad.
+					 (2)Other ad types can have any frequency. Frequency=n means show the ad after nth item. Frequency=0 means no ad
+					 (3) frequency="" means that frequency attribute is not required for this ad type e.g. for newsDetail the frequency=""-->
+	<!--slot :: slot is used only in List sections of the App. It is used to define at which slot the ad is supposed to show
+				e.g slot="2" frequency="0" means that show the ad at slot number 2 and then start showing ad at 2+5=7th slot, 7+5=13th slot.. and so on.-->
+	<!-- targetParams :: This attribute is used to add a sponsored adKeyword e.g if home screen is sponsored by Samsung then for home targetParams="samsung"-->
+	<!--All the ads are targeted with key='akw' and value='driven from backend' -->
+		
+	<adSection category ="display" provider = "doubleclick"  adUnit ="/7231/e_mobile/online_app/iphone/">
+		<!--USING GPT (GOOGLE PUBLISHER TAGS)   https://support.google.com/dfp_sb/answer/1698183#sequential-->
+		<!--adUnit is composed of networdCode (=2620) and adUnit (=e_mobile/online_app/iphone)-->
+		
+		<!--**************** (1) ADS FOR APP LAUNCH BEGIN ****************-->		
+		<!-- LAUNCH UNIT only has ON and OFF switch. Frequency of 1 means show ad and 0 means no ad. -->	
+		
+		<!-- HARD LAUNCH AD UNIT WHEN APP IS FRESHLY LAUNCHED -->		
+		<ad type="launchInterstitial" tag="launchHard" targetParams=""  frequency="0" sizes="(320,360),(300,250),(320,480)"/>
+		
+		<!-- SOFT LAUNCH AD UNIT WHEN APP IS LAUNCHED FROM BACKGROUND. AVAILABLE ON ALL APP SECTIONS EXCEPT WHEN VIDEOS ARE PLAYING -->	
+		<ad type="launchInterstitial" tag="launchSoft" targetParams=""  frequency="0" sizes="(320,360),(300,250),(320,480)"/>
+		
+		<!--**************** ADS FOR APP LAUNCH END ****************-->	
+		
+		<!--**************** (2) ADS FOR LIST VIEWS BEGIN ****************-->		
+		<!--slot - slot is used only in List sections of the App. It is used to define at which slot/position the ad is supposed to show up. 
+			For example - slot="2" frequency="0" means show the ad at slot number 2 and then start showing ad at 2+5=7th slot, 7+5=13th slot.. and so on.-->
+		<!-- Frequency of 0 here means do not call for ad -->
+				
+		<!-- HOME/ALL LIST SCREEN -->
+		<ad type="bannerInline" tag="all/featuredList" targetParams=""  slot="0" frequency="0" sizes="(300,50),(320,50),(1,1)"/>
+		<ad type="bannerInfeed" tag="all/contentList" targetParams="" slot="0" frequency="0" sizes="(320,165)"/>
+		
+		<!-- NEWS LIST SCREEN -->
+		<ad type="bannerInline" tag="news/list" targetParams="" slot="0" frequency="0" sizes="(300,50),(320,50),(1,1)"/>
+		<ad type="bannerInfeed" tag="news/list" targetParams="" slot="0" frequency="0" sizes="(320,165)"/>
+		
+		<!-- PHOTOS LIST SCREEN -->
+		<ad type="bannerInline" tag="photos/list" targetParams="" slot="0" frequency="0" sizes="(300,50),(320,50),(1,1)"/>
+		<ad type="bannerInfeed"  tag="photos/list" targetParams="" slot="0" frequency="0" sizes="(320,165)"/>
+		
+		<!-- VIDEOS LIST SCREEN -->
+		<ad type="bannerInline"  tag="videos/list" targetParams="" slot="0" frequency="0" sizes="(300,50),(320,50),(1,1)"/>
+		<ad type="bannerInfeed"  tag="videos/list" targetParams="" slot="0" frequency="0" sizes="(320,165)"/>
+		
+		<!-- TOPICS/TOPIC-HUB LIST SCREEN -->
+		<ad type="bannerInline" tag="topic/list/$categoryKey" targetParams="" slot="0" frequency="0" sizes="(300,50),(320,50),(1,1)"/>
+		<ad type="bannerInfeed" tag="topic/list/$categoryKey" targetParams="" slot="0" frequency="0" sizes="(320,165)"/>
+		
+		<!--SHOWS LIST SCREEN -->
+		<ad type="bannerInline" tag="shows/list/$showCategoryKey" targetParams=""  slot="0" frequency="0" sizes="(300,50),(320,50),(1,1)"/>
+		<ad type="bannerInfeed" tag="shows/list/$showCategoryKey" targetParams=""  slot="0" frequency="0" sizes="(320,165)"/>
+		
+		<!-- FIRST LOOK SECTION LIST SCREEN -->
+		<ad type="bannerInline" tag="news/firstLook/list" targetParams="" slot="0" frequency="0" sizes="(300,50),(320,50),(1,1)"/>
+		<ad type="bannerInfeed" tag="news/firstLook/list" targetParams="" slot="0" frequency="0" sizes="(320,165)"/>
+
+		<!-- **************** ADS FOR LIST VIEWS END ****************-->
+		
+		<!-- **************** (3) ADS FOR BANNER INLINE ON DETAIL SCREENS BEGIN ****************-->	
+		<!-- Meaning of "bannerInlineScrollable" - This tag will control if the banner is pinned to the bottom or moves with content and on scrolling becomes part of the content. 
+		The position where to insert in the detail pages is driven by the feeds -->
+		
+		<!-- ALL DETAIL SCREEN  -->
+		<ad type="bannerInline" tag="all/detailBanner" targetParams="" bannerInlineScrollable="true" frequency="0"  sizes="(300,50),(320,50),(1,1)" />
+		
+		<!-- NEWS DETAIL SCREEN  -->
+		<ad type="bannerInline" tag="news/detailBanner" targetParams="" bannerInlineScrollable="true" frequency="0" sizes="(300,50),(320,50),(1,1)" />
+		
+		<!-- PHOTOS DETAIL SCREEN  -->
+		<!-- No banner ads are present on the photos screen. Only interstitial ads are present. -->
+		
+		<!-- VIDEOS DETAIL SCREEN  -->
+		<ad type="bannerInline" tag="video/detailBanner" targetParams=""  bannerInlineScrollable="true" frequency="0"  sizes="(300,50),(320,50),(1,1)"/>
+		
+		<!-- TOPIC DETAIL SCREEN  -->
+		<ad type="bannerInline" tag="topic/detailBanner/$categoryKey" targetParams=""  bannerInlineScrollable="true" frequency="0" sizes="(300,50),(320,50),(1,1)"/>
+		
+		<!-- SHOWS DETAIL SCREEN  -->
+		<ad type="bannerInline" tag="shows/detailBanner/$showCategoryKey" targetParams=""  bannerInlineScrollable="true" frequency="0"  sizes="(300,50),(320,50),(1,1)"/>
+		
+		
+		<!-- ****************BANNER ADS ON DETAIL SCREENS END ****************-->	
+		
+		<!-- ****************(4) ADS FOR INTERSTITIALS ON DETAIL SCREENS BEGIN ****************-->	
+		<!-- ALL INTERSTITALS--> 
+		<ad type="detailInterstitial" tag="all/detailInterstitial" targetParams=""  frequency="0" sizes="(320,360),(300,250),(320,480)"/>
+		
+		<!-- NEWS INTERSTITALS-->
+		<ad type="detailInterstitial" tag="news/detailInterstitial" targetParams=""  frequency="0" sizes="(320,360),(300,250),(320,480)"/>
+		
+		<!-- PHOTOS INTERSTITAL -->
+		<ad type="detailInterstitial" tag="photos/detailInterstitial/$guid" targetParams=""  frequency="0" sizes="(320,360),(300,250),(320,480)"/>			
+		
+		<!-- VIDEOS INTERSTITALS--> 
+		<ad type="detailInterstitial" tag="videos/detailInterstitial" targetParams=""  frequency="0" sizes="(320,360),(300,250),(320,480)"/>
+		
+		<!-- TOPIC INTERSTITALS--> 
+		<ad type="detailInterstitial" tag="topic/detailInterstitial/$categoryKey" targetParams=""  frequency="0" sizes="(320,360),(300,250),(320,480)"/>
+		
+		<!-- SHOWS INTERSTITALS--> 
+		<ad type="detailInterstitial" tag="shows/detailInterstitial/$showCategoryKey" targetParams=""  frequency="0" sizes="(320,360),(300,250),(320,480)"/>
+				
+		<!-- ****************ADS FOR INTERSTITIALS END ****************-->			
+	</adSection>
+	
+	<!-- **************** VIDEO PREROLL ADS BEGIN **************** -->
+	<adSection category ="video" provider = "freewheel" networkID="171224" serverURL="http://29773.v.fwmrm.net/ad/p/1" platformProfile="171224:nbcu_test_ios">
+		<!-- Reference Link for Freewheel=http://support.ooyala.com/developers/documentation/concepts/mobile_sdk_ios_freewheel.html-->
+		<ad type="videoPreroll" tag="videos" frequency="0"  assetID="$assetID" siteSection="fw_mobile_test_iphone" /> 			
+		<ad type="videoPreroll" tag="dailyLiveStream"  frequency="0" assetID="eonline-0" siteSection="fw_mobile_test_iphone" />		
+		<ad type="videoPreroll" tag="specialEventLiveStream" frequency="0" assetID="eonline-1" siteSection="fw_mobile_test_iphone" />
+	</adSection>
+	<!-- **************** VIDEO PREROLL ADS END **************** -->
+</ads>
